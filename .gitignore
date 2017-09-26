@@ -16,8 +16,8 @@ node_modules/bootstrap/*
 node_modules/pace-progress/*
 node_modules/chart.js/*
 
-!node_modules/font-awesome/css
-!node_modules/simple-line-icons/css
+!node_modules/font-awesome/*
+!node_modules/simple-line-icons/*
 !node_modules/jquery/dist
 !node_modules/popper.js/dist
 !node_modules/bootstrap/dist
