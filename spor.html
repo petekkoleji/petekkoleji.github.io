@@ -80,7 +80,7 @@
 
     <div class="app-body">
         <div class="sidebar">
-                <nav class="sidebar-nav">
+            <nav class="sidebar-nav">
                 <ul class="nav">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html"><i class="icon-speedometer"></i> Ana Panel </a>
@@ -120,14 +120,13 @@
             </nav>
 
         </div>
-
         <!-- Main content -->
         <main class="main">
 
             <!-- Breadcrumb -->
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">Ana Panel</li>
-                <li class="breadcrumb-item active"></li>
+                <li class="breadcrumb-item active">Spor Değerlendirme Sistemi</li>
 
                 <!-- Breadcrumb Menu-->
                 <li class="breadcrumb-menu d-md-down-none">
@@ -140,61 +139,124 @@
             </ol>
 
 
-            <div class="container-fluid">
-                <div class="animated fadeIn">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <i class="fa fa-cogs"></i> Projeler
+            <div class="container animated fadeIn">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#look-data" role="tab" aria-controls="home">Verilere Gözat</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#enter-data" role="tab" aria-controls="profile">Veri Gir</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="look-data" role="tabpanel">
+                                <div class="col-ls-12">
+                                    <h6>Öğrenci Ara</h6>
+                                    <div class="form-control" id="ogrenci-bul" contenteditable="plaintext-only" placeholder="İsim yada No"></div>
                                 </div>
-                                <div class="card-body">
-                                    <ul class="nav nav-tabs" role="tablist">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home">
-                                                Genel İş Takibi</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">
-                                                Öğretmen Değerlendirme Sistemi</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">
-                                                Spor Değerlendirme Sistemi</a>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div class="tab-pane active" id="home" role="tabpanel">
-                                            <p>Genel iş tabiki sistemi yapılması gereken işlerin listelenmesi ve yetkilendirilen kullanıcılar tarafından görülmesini sağlayan bir sistemdir.
-                                            Oluşturulan işler oluşturulma tarihi, bitiş tarihi gibi bilgileri saklar. Bitirilen işler işaretlenir,
-                                             işaretlere göre filtrelenir ya da sonradan değerlendirmeye tabi tutulabilir.</p>
-                                            <a href="is-takip.html"> <button class="btn btn-primary"> 
-                                                Genel İş Takibi Paneline Git</button> </a>
+                                <hr>
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            Radar Grafiği
+                                            <div class="card-actions">
+
+                                            </div>
                                         </div>
-                                        <div class="tab-pane" id="profile" role="tabpanel">
-                                        <p>Öğretmen Değerlendirme Sistemi'nde öğretmenler üsleri tarafından performanslarına belirli kategorilerde puanlanır. 
-                                        Daha sonra genel bir rapor ortaya çıkarılır.</p>
-                                        <a href="ods.html"> 
-                                        <button class="btn btn-primary">
-                                          Öğretmen Değerlendirme Sistemi Paneline Git  </button></a>
-                                        </div>
-                                        <div class="tab-pane" id="messages" role="tabpanel">
-                                        <p>Spor değerlendirme sistemi yıl başında öğrencilerin fiziksel kondisyonlarını ölçüp raporlamak için bir sistemdir.
-                                            Bu sistemdeki raporlar yazdırılabilir ve veliler tarafından sorgulanmaya açık olur.</p>
-                                        <a href="spor.html"> 
-                                        <button class="btn btn-primary">
-                                         Spor Değerlendirme Sistemi Paneline Git  </button></a>
+                                        <div class="card-body">
+                                            <div class="chart-wrapper">
+                                                <canvas id="canvas-4"></canvas>
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
+                            <div class="tab-pane" id="enter-data" role="tabpanel">
+                                <div class="col-md-12">
+                                    <div>Yıl Seçiniz</div>
+                                    <div class="input-group">
+                                        <select class="form-control" id="year">
+                                                <option>2016</option>
+                                                <option>2017</option>
+                                                <option>2018</option>
+                                            </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 fl-left">
+                                    <div>Sınıf Seçiniz</div>
+                                    <div class="input-group">
+                                        <select class="form-control" id="class">       
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    <option>6</option>
+                                                    <option>7</option>
+                                                    <option>8</option>
+                                                </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 fl-left">
+                                    <div>Şube Seçiniz</div>
+                                    <div class="input-group">
+                                        <select class="form-control" id="class">
+                                                    <option>A</option>   
+                                                    <option>B</option>
+                                                    <option>C</option>
+                                                    <option>D</option>
+                                                    <option>E</option>
+                                                    <option>F</option>
+                                                </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="">Alan Seçiniz : </div>
+                                    <div class="input-group">
+                                        <select class="form-control" id="criteria">
+                                                <option>Kısa Mesafe Koşusu (20M)</option>
+                                                <option>Durarak Uzun Atlama</option>
+                                                <option>Durarak Top Fırlatma</option>
+                                                <option>Esneklik</option>
+                                                <option>Koordinasyon Parkuru Testi</option>
+                                            </select>
+                                        <div class="input-group-btn"><button type="button" class="btn btn-primary"><i class="fa fa-plus"></i></button></div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <table class="table table-bordered table-striped table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>İsim</th>
+                                            <th>Öğr. No</th>
+                                            <th>Skor</th>
+                                            <th>Puan</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>İsim</td>
+                                            <td>No</td>
+                                            <td>Skor</td>
+                                            <td>
+                                                <span class="badge badge-success">88</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                        <!--/.col-->
-                        <!--/.row-->
+
                     </div>
 
+                    <!--/.col-->
                 </div>
-                <!-- /.conainer-fluid -->
+            </div>
+            <!-- /.conainer-fluid -->
         </main>
 
         <aside class="aside-menu">
@@ -485,35 +547,79 @@
         </aside>
 
 
-        </div>
+    </div>
 
-        <footer class="app-footer">
-            Petek Koleji © 2017
-            <span class="float-right">CoreUI Teması Kullanılmıştır. <a href="http://coreui.io">CoreUI</a>
+    <footer class="app-footer">
+        Petek Koleji © 2017
+        <span class="float-right">CoreUI Teması Kullanılmıştır. <a href="http://coreui.io">CoreUI</a>
         </span>
-        </footer>
+    </footer>
 
-        <!-- Bootstrap and necessary plugins -->
-        <script src="node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="node_modules/pace-progress/pace.min.js"></script>
-
-
-        <!-- Plugins and scripts required by all views -->
-        <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <!-- Bootstrap and necessary plugins -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/pace-progress/pace.min.js"></script>
 
 
-        
-        <!-- GenesisUI main scripts -->
+    <!-- Plugins and scripts required by all views -->
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
 
-        <script src="js/app.js"></script>
 
-        <script src="js/firebase.js"></script>
-        <script src="js/firebase-ui-auth__tr.js"></script>
-        <script src="js/_firebase.js"></script>
-        <script src="js/inline-blocks.js"></script>
-        <script src="js/spor.js"></script>
+    <!-- GenesisUI main scripts -->
+
+    <script src="js/app.js"></script>
+
+    <script>
+        var radarChartData = {
+            labels: ['Koşma', 'Durarak Top Atma', 'Esneklik', 'Koordinasyon Parkuru', 'Durarak Uzun Atlama'],
+            datasets: [
+                {
+                    label: '',
+                    backgroundColor: 'rgba(220,80,80,0)',
+                    borderColor: 'rgba(255,120,120,0)',
+                    pointBackgroundColor: 'rgba(220,220,220,0)',
+                    pointBorderColor: 'rgba(220,220,220,0)',
+                    pointHighlightFill: 'rgba(220,220,220,0)',
+                    pointHighlightStroke: 'rgba(220,220,220,0)',
+                    data: [0, 20, 60, 80, 100]
+                },
+                {
+                    label: 'Ortalama',
+                    backgroundColor: 'rgba(220,80,80,0.2)',
+                    borderColor: 'rgba(255,120,120,1)',
+                    pointBackgroundColor: 'rgba(220,220,220,1)',
+                    pointBorderColor: '#fff',
+                    pointHighlightFill: '#fff',
+                    pointHighlightStroke: 'rgba(220,220,220,1)',
+                    data: [50, 50, 50, 50, 50]
+                },
+                {
+                    label: 'Öğrenci',
+                    backgroundColor: 'rgba(30,220,30,0.2)',
+                    borderColor: 'rgba(50,150,50,1)',
+                    pointBackgroundColor: 'rgba(151,187,205,1)',
+                    pointBorderColor: '#fff',
+                    pointHighlightFill: '#fff',
+                    pointHighlightStroke: 'rgba(151,187,205,1)',
+                    data: [80, 80, 70, 90, 86]
+                }
+            ]
+        };
+        var ctx = document.getElementById('canvas-4');
+        var chart = new Chart(ctx, {
+            type: 'radar',
+            data: radarChartData,
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+    <script src="js/firebase.js"></script>
+    <script src="js/firebase-ui-auth__tr.js"></script>
+    <script src="js/_firebase.js"></script>
+    <script src="js/inline-blocks.js"></script>
+    <!-- <script src="js/spor.js"></script> -->
 
 
 </body>

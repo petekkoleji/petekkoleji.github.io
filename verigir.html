@@ -80,7 +80,7 @@
 
     <div class="app-body">
         <div class="sidebar">
-                <nav class="sidebar-nav">
+            <nav class="sidebar-nav">
                 <ul class="nav">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html"><i class="icon-speedometer"></i> Ana Panel </a>
@@ -120,14 +120,13 @@
             </nav>
 
         </div>
-
         <!-- Main content -->
         <main class="main">
 
             <!-- Breadcrumb -->
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">Ana Panel</li>
-                <li class="breadcrumb-item active"></li>
+                <li class="breadcrumb-item active">Yönetici Veri Girişi</li>
 
                 <!-- Breadcrumb Menu-->
                 <li class="breadcrumb-menu d-md-down-none">
@@ -140,62 +139,110 @@
             </ol>
 
 
-            <div class="container-fluid">
-                <div class="animated fadeIn">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <i class="fa fa-cogs"></i> Projeler
+            <div class="animated fadeIn container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                Veri Girişi
+                                <div class="card-actions">
+
                                 </div>
-                                <div class="card-body">
-                                    <ul class="nav nav-tabs" role="tablist">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home">
-                                                Genel İş Takibi</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">
-                                                Öğretmen Değerlendirme Sistemi</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">
-                                                Spor Değerlendirme Sistemi</a>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div class="tab-pane active" id="home" role="tabpanel">
-                                            <p>Genel iş tabiki sistemi yapılması gereken işlerin listelenmesi ve yetkilendirilen kullanıcılar tarafından görülmesini sağlayan bir sistemdir.
-                                            Oluşturulan işler oluşturulma tarihi, bitiş tarihi gibi bilgileri saklar. Bitirilen işler işaretlenir,
-                                             işaretlere göre filtrelenir ya da sonradan değerlendirmeye tabi tutulabilir.</p>
-                                            <a href="is-takip.html"> <button class="btn btn-primary"> 
-                                                Genel İş Takibi Paneline Git</button> </a>
-                                        </div>
-                                        <div class="tab-pane" id="profile" role="tabpanel">
-                                        <p>Öğretmen Değerlendirme Sistemi'nde öğretmenler üsleri tarafından performanslarına belirli kategorilerde puanlanır. 
-                                        Daha sonra genel bir rapor ortaya çıkarılır.</p>
-                                        <a href="ods.html"> 
-                                        <button class="btn btn-primary">
-                                          Öğretmen Değerlendirme Sistemi Paneline Git  </button></a>
-                                        </div>
-                                        <div class="tab-pane" id="messages" role="tabpanel">
-                                        <p>Spor değerlendirme sistemi yıl başında öğrencilerin fiziksel kondisyonlarını ölçüp raporlamak için bir sistemdir.
-                                            Bu sistemdeki raporlar yazdırılabilir ve veliler tarafından sorgulanmaya açık olur.</p>
-                                        <a href="spor.html"> 
-                                        <button class="btn btn-primary">
-                                         Spor Değerlendirme Sistemi Paneline Git  </button></a>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="card-body">
+                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#largeModal">
+                                    <i class="fa fa-plus"></i><i class="fa fa-user"></i> Öğrenci Gir
+                                    </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!--/.col-->
+                </div>
+            </div>
+            <!-- /.conainer-fluid -->
+        </main>
+        <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-primary modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Öğrenci Girişi</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="col-md-6">
+                                <div>Okul No <small class="text-danger">(Okul no eşsiz olmalıdır)</small> </div>
+                                <input id="okulno" type="text" class="form-control">
+                                <div id="okulno-alert" class="alert hidden"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="">İsim </div>
+                                <input id="isim" type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="">Soyisim </div>
+                                <input id="soyisim" type="text" class="form-control">
+                            </div>
+                            <hr>
+                            <div class="col-md-12">
+                                <div>Yıl Seçiniz</div>
+                                <div class="input-group">
+                                    <select id="yil" class="form-control" id="year">
+                                                <option>2016</option>
+                                                <option>2017</option>
+                                                <option>2018</option>
+                                            </select>
+                                    <div class="input-group-btn"><button type="button" class="btn btn-primary"><i class="fa fa-plus"></i></button></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 fl-left">
+                                <div>Sınıf Seçiniz</div>
+                                <div class="input-group">
+                                    <select id="sinif" class="form-control" id="class">       
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    <option>6</option>
+                                                    <option>7</option>
+                                                    <option>8</option>
+                                                </select>
+                                    <div class="input-group-btn"><button type="button" class="btn btn-primary"><i class="fa fa-plus"></i></button></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 fl-left">
+                                <div>Şube Seçiniz</div>
+                                <div class="input-group">
+                                    <select id="sube" class="form-control" id="class">
+                                                    <option>A</option>   
+                                                    <option>B</option>
+                                                    <option>C</option>
+                                                    <option>D</option>
+                                                    <option>E</option>
+                                                    <option>F</option>
+                                                </select>
+                                    <div class="input-group-btn"><button type="button" class="btn btn-primary"><i class="fa fa-plus"></i></button></div>
                                 </div>
                             </div>
                         </div>
-                        <!--/.col-->
-                        <!--/.row-->
                     </div>
-
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" onclick="ogrenciKaydet(event)">Kaydet</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">İptal</button>
+                    </div>
                 </div>
-                <!-- /.conainer-fluid -->
-        </main>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
 
         <aside class="aside-menu">
             <ul class="nav nav-tabs" role="tablist">
@@ -485,35 +532,87 @@
         </aside>
 
 
-        </div>
+    </div>
 
-        <footer class="app-footer">
-            Petek Koleji © 2017
-            <span class="float-right">CoreUI Teması Kullanılmıştır. <a href="http://coreui.io">CoreUI</a>
+    <footer class="app-footer">
+        Petek Koleji © 2017
+        <span class="float-right">CoreUI Teması Kullanılmıştır. <a href="http://coreui.io">CoreUI</a>
         </span>
-        </footer>
+    </footer>
 
-        <!-- Bootstrap and necessary plugins -->
-        <script src="node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="node_modules/pace-progress/pace.min.js"></script>
-
-
-        <!-- Plugins and scripts required by all views -->
-        <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <!-- Bootstrap and necessary plugins -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/pace-progress/pace.min.js"></script>
 
 
-        
-        <!-- GenesisUI main scripts -->
+    <!-- Plugins and scripts required by all views -->
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
 
-        <script src="js/app.js"></script>
 
-        <script src="js/firebase.js"></script>
-        <script src="js/firebase-ui-auth__tr.js"></script>
-        <script src="js/_firebase.js"></script>
-        <script src="js/inline-blocks.js"></script>
-        <script src="js/spor.js"></script>
+    <!-- GenesisUI main scripts -->
+
+    <script src="js/app.js"></script>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/firebase-ui-auth__tr.js"></script>
+    <script src="js/_firebase.js"></script>
+    <script src="js/inline-blocks.js"></script>
+    <script>
+        function checkExistingOkulNo(q) {
+            return new Promise((res) => {
+                frbsdb.child('okullar/petek-koleji/sube-1/sahislar/ogrenci').once('value').then((ogrencilist) => {
+                    const years = [];
+                    let existing_ogrenci;
+                    ogrencilist.forEach((year) => {
+                        years.push(year.key);
+                        frbsdb.child('okullar/petek-koleji/sube-1/sahislar/ogrenci/' + year.key).orderByKey().equalTo(q).once('value').then((ogrencifound) => {
+                            existing_ogrenci = ogrencifound.val();
+                            res(existing_ogrenci);
+                        });
+                    });
+
+                });
+            });
+        }
+
+
+        function ogrenciKaydet(e) {
+            const $el = $(e.currentTarget);
+            const $content = $el.parents('.modal-content');
+            const isim = $content.find('#isim').val();
+            const soyisim = $content.find('#soyisim').val();
+            const yil = $content.find('#yil').val();
+            const sube = $content.find('#sube').val();
+            const sinif = $content.find('#sinif').val();
+
+            console.log({ isim, soyisim, yil, sube, sinif })
+        }
+
+        let wait = null;
+        $('#okulno').on('input change', (e) => {
+            clearTimeout(wait);
+            $('#okulno-alert')
+            .removeClass('alert-danger').removeClass('alert-success').addClass('alert-warning')
+            .html(' Kontrol ediliyor...')
+            wait = setTimeout(() => {
+                const no = $(e.currentTarget).val();
+                checkExistingOkulNo(no).then((result) => {
+                    if (result) {
+                        $('#okulno-alert')
+                            .addClass('alert-danger').removeClass('alert-success').removeClass('alert-warning').removeClass('hidden')
+                            .html(`Bu okul numarasıyla kayıtlı bir öğrenci zaten var. (${result[Object.keys(result)[0]].isim})`)
+                    } else {
+                        $('#okulno-alert')
+                            .addClass('alert-success').removeClass('alert-danger').removeClass('alert-warning').removeClass('hidden')
+                            .html(`Bu okul numarası eşsiz.`)
+                    }
+                });
+            }, 600);
+        });
+    </script>
+    <!-- <script src="js/spor.js"></script> -->
 
 
 </body>

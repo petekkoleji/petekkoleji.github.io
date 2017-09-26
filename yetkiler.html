@@ -79,55 +79,54 @@
     </header>
 
     <div class="app-body">
-        <div class="sidebar">
-                <nav class="sidebar-nav">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html"><i class="icon-speedometer"></i> Ana Panel </a>
-                    </li>
-                    <!-- 
+    <div class="sidebar">
+        <nav class="sidebar-nav">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><i class="icon-speedometer"></i> Ana Panel </a>
+                </li>
+                <!-- 
                     <li class="nav-title">
                         Yönetim 
                     </li> -->
-                    <li class="nav-item nav-dropdown">
-                        <a class="nav-link" href="#"><i class="icon-chart"></i> İstatistikler</a>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a class="nav-link" href="#"><i class="icon-key"></i> Yetkilendirmeler</a>
-                    </li>
-                    <li class="nav-item nav-dropdown">
-                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-menu"></i>Projeler</a>
-                        <ul class="nav-dropdown-items">
-                            <li class="nav-item text-small">
-                                <a class="nav-link" href="#"><i class="icon-pie-chart"></i> Öğretmen Değerlendirme Sis.</a>
-                            </li>
-                            <li class="nav-item text-small">
-                                <a class="nav-link" href="#"><i class="icon-pie-chart"></i> Spor Değerlendirme Sis.</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="icon-calculator"></i> İş Takip</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="icon-pie-chart"></i> Veri Girişi</a>
-                    </li>
-                    <li class="divider"></li>
-                    <!-- <li class="nav-title">
+                <li class="nav-item nav-dropdown">
+                    <a class="nav-link" href="#"><i class="icon-chart"></i> İstatistikler</a>
+                </li>
+                <li class="nav-item nav-dropdown">
+                    <a class="nav-link" href="#"><i class="icon-key"></i> Yetkilendirmeler</a>
+                </li>
+                <li class="nav-item nav-dropdown">
+                    <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-menu"></i>Projeler</a>
+                    <ul class="nav-dropdown-items">
+                        <li class="nav-item text-small">
+                            <a class="nav-link" href="#"><i class="icon-pie-chart"></i> Öğretmen Değerlendirme Sis.</a>
+                        </li>
+                        <li class="nav-item text-small">
+                            <a class="nav-link" href="#"><i class="icon-pie-chart"></i> Spor Değerlendirme Sis.</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="icon-calculator"></i> İş Takip</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="icon-pie-chart"></i> Veri Girişi</a>
+                </li>
+                <li class="divider"></li>
+                <!-- <li class="nav-title">
                         Extras
                     </li> -->
-                </ul>
-            </nav>
+            </ul>
+        </nav>
 
-        </div>
-
+    </div>
         <!-- Main content -->
         <main class="main">
 
             <!-- Breadcrumb -->
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">Ana Panel</li>
-                <li class="breadcrumb-item active"></li>
+                <li class="breadcrumb-item active">Yetkilendirme</li>
 
                 <!-- Breadcrumb Menu-->
                 <li class="breadcrumb-menu d-md-down-none">
@@ -143,49 +142,104 @@
             <div class="container-fluid">
                 <div class="animated fadeIn">
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-lg-6">
                             <div class="card">
                                 <div class="card-header">
-                                    <i class="fa fa-cogs"></i> Projeler
+                                    <h5><i class="icon-key"></i> Spor Rapor Sistemi Yetkililer</h5>
                                 </div>
                                 <div class="card-body">
-                                    <ul class="nav nav-tabs" role="tablist">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home">
-                                                Genel İş Takibi</a>
+                                    <h6>Yetki vermek için personel arayın.</h6>
+                                    <div contenteditable="plaintext-only" class="form-control" placeholder="İsim ya da email" type="text" id="spor-yetki"></div>
+                                    <hr>    
+                                    <b style="margin: 10px;">Yetkisi bulunanlar</b>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>İsim</th>
+                                                <th>Email</th>
+                                                <th>Ünvan</th>
+                                                <th>Düzenle</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>M.Ali Petek</td>
+                                                <td>malipetek@gmail.com</td>
+                                                <td>Member</td>
+                                                <td>
+                                                    <button class="btn btn-danger">
+                                                        Yetkisini Kaldır
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#">Prev</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">
-                                                Öğretmen Değerlendirme Sistemi</a>
+                                        <li class="page-item active">
+                                            <a class="page-link" href="#">1</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">
-                                                Spor Değerlendirme Sistemi</a>
+                                        <li class="page-item"><a class="page-link" href="#">2</a>
                                         </li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div class="tab-pane active" id="home" role="tabpanel">
-                                            <p>Genel iş tabiki sistemi yapılması gereken işlerin listelenmesi ve yetkilendirilen kullanıcılar tarafından görülmesini sağlayan bir sistemdir.
-                                            Oluşturulan işler oluşturulma tarihi, bitiş tarihi gibi bilgileri saklar. Bitirilen işler işaretlenir,
-                                             işaretlere göre filtrelenir ya da sonradan değerlendirmeye tabi tutulabilir.</p>
-                                            <a href="is-takip.html"> <button class="btn btn-primary"> 
-                                                Genel İş Takibi Paneline Git</button> </a>
-                                        </div>
-                                        <div class="tab-pane" id="profile" role="tabpanel">
-                                        <p>Öğretmen Değerlendirme Sistemi'nde öğretmenler üsleri tarafından performanslarına belirli kategorilerde puanlanır. 
-                                        Daha sonra genel bir rapor ortaya çıkarılır.</p>
-                                        <a href="ods.html"> 
-                                        <button class="btn btn-primary">
-                                          Öğretmen Değerlendirme Sistemi Paneline Git  </button></a>
-                                        </div>
-                                        <div class="tab-pane" id="messages" role="tabpanel">
-                                        <p>Spor değerlendirme sistemi yıl başında öğrencilerin fiziksel kondisyonlarını ölçüp raporlamak için bir sistemdir.
-                                            Bu sistemdeki raporlar yazdırılabilir ve veliler tarafından sorgulanmaya açık olur.</p>
-                                        <a href="spor.html"> 
-                                        <button class="btn btn-primary">
-                                         Spor Değerlendirme Sistemi Paneline Git  </button></a>
-                                        </div>
-                                    </div>
+                                        <li class="page-item"><a class="page-link" href="#">3</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.col-->
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5><i class="icon-key"></i> Öğretmen Değerlendirme Sistemi Yetkililer</h5>
+                                </div>
+                                <div class="card-body">
+                                    <h6>Yetki vermek için personel arayın.</h6>
+                                    <div contenteditable="plaintext-only" class="form-control" placeholder="İsim ya da email" type="text" id="spor-yetki"></div>
+                                    <hr>
+                                    <b style="margin: 10px;">Yetkisi bulunanlar</b>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>İsim</th>
+                                                <th>Email</th>
+                                                <th>Ünvan</th>
+                                                <th>Düzenle</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Gökhan Hoca</td>
+                                                <td>gk@gmail.com</td>
+                                                <td>Müdür</td>
+                                                <td>
+                                                    <button class="btn btn-danger">
+                                                        Yetkisini Kaldır
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#">Prev</a>
+                                        </li>
+                                        <li class="page-item active">
+                                            <a class="page-link" href="#">1</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
@@ -504,7 +558,6 @@
         <script src="node_modules/chart.js/dist/Chart.min.js"></script>
 
 
-        
         <!-- GenesisUI main scripts -->
 
         <script src="js/app.js"></script>
@@ -513,7 +566,7 @@
         <script src="js/firebase-ui-auth__tr.js"></script>
         <script src="js/_firebase.js"></script>
         <script src="js/inline-blocks.js"></script>
-        <script src="js/spor.js"></script>
+        <script src="js/yetki.js"></script>
 
 
 </body>
